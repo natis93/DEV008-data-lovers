@@ -1,7 +1,7 @@
 // estas funciones son de ejemplo
-
-export const example = () => {
-  return 'example';
+import data from '.data/ghibli/ghibli.js';
+export const ghibliData= () => {
+  return data.films;
 };
 
 export const anotherExample = () => {
