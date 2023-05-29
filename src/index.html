@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <header
     <title>Data Lovers Studio Ghibli</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -17,12 +18,18 @@
       based in Koganei, Tokyo.</p>
       <button> more</button>
 
-
-
-
-
     <div id="root"></div>
     
+    
     <script src="main.js" type="module"></script>
+    <label for="movie-filters">Filter by:</label>
+    <select name="movie-filters" id="movie-filters">
+        <option value="a-z">A-Z</option>
+        <option value="date">By date</option>
+        <option value="best-rated">Best rated</option>
+    </select>
   </body>
+  <footer>
+    <p>© 1985-2023 Studio Ghibli. All Rights Reserved.</p>
+  </footer>
 </html>
