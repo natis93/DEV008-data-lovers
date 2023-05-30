@@ -1,6 +1,6 @@
 import { example } from './data.js';
 // import data from './data/lol/lol.js';
-import data from './data/ghibli/ghibli.js';
+import dataGhibli from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 /*const titles = ["Castle in the Sky", "Grave of the Fireflies", "Only Yesterday", "Porco Rosso", "Spirited Away"];
@@ -10,12 +10,11 @@ const filteredFilms = titles.filter(title => title.charAt(0) === "a").sort();
 
 console.log(filteredFilms); // Resultado: ["Castle in the Sky"]*/
 
-
 const filmFilters = document.getElementById('film-filters');
 const filmList = document.getElementById('film-list');
 const films = filmList.querySelectorAll('.film');
 
-filmFilters.addEventListener('change', function() {
+/*filmFilters.addEventListener('change', function() {
   const selectedValue = this.value;
 
   if (selectedValue === 'a-z') {
@@ -45,7 +44,10 @@ filmFilters.addEventListener('change', function() {
         filmList.appendChild(film);
       });
   }
-});
+});*/
+const filmsGhibli=dataGhibli.films
+for (let index = 0; index < filmsGhibli.length; index++) {
+  const element = filmsGhibli[index];
+console.log(element.title);    
+}
 
-
-console.log(example, data);
