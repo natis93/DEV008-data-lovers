@@ -50,4 +50,3 @@ for (let index = 0; index < filmsGhibli.length; index++) {
   const element = filmsGhibli[index];
 console.log(element.title);    
 }
-
