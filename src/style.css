@@ -4,8 +4,18 @@
 }/* /* Tamaño inicial de las imágenes */
 
 /* Estilos para las imágenes */
+#film-list {
+    column-count: 5; /* Número de columnas deseadas */
+    column-gap: 10px; /* Espacio entre las columnas */
+    vertical-align: middle;
+    
+  }
+
 #film-list img {
   margin-right: 30px; /* Espacio entre las imágenes */
-width:100px;
-}
+  width: 200px;
+  height: 300px;
+  display: flex
+  
+  }
 
