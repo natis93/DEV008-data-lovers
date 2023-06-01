@@ -19,22 +19,27 @@ for (let i = 0; i < filmsGhibli.length; i++) {
   const imgElement = document.createElement("img");
 
   // Establece el atributo src con la URL de la imagen actual
- imgElement.src = filmsGhibli[i].poster;
-
+  imgElement.src = filmsGhibli[i].poster;
   // Establece el atributo style para cambiar el tamaño de la imagen
   //imgElement.style.width = tamanosImagenes[i];
+  const titleElement = document.createElement("h2");
+  titleElement.textContent = filmsGhibli[i].title;
+  filmListDiv.appendChild(titleElement);
+
+  const release_dateElement = document.createElement("p");
+  release_dateElement.textContent = filmsGhibli[i].release_date;
+  filmListDiv.appendChild(release_dateElement);
+
+  const directorElement = document.createElement("h3");
+  directorElement.textContent =filmsGhibli[i].director;
+  filmListDiv.appendChild(directorElement);
+
 
   // Agrega la imagen al elemento div
   filmListDiv.appendChild(imgElement);
+  console.log(titleElement) 
+
 }
-
-
-
-
-
-
-
-
 
 
 
