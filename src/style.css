@@ -1,0 +1,11 @@
+/* Estilos para las imágenes */
+/*#film-list img {
+  width: 100px; 
+}/* /* Tamaño inicial de las imágenes */
+
+/* Estilos para las imágenes */
+#film-list img {
+  margin-right: 30px; /* Espacio entre las imágenes */
+width:100px;
+}
+
