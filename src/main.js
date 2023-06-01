@@ -15,32 +15,32 @@ const filmListDiv = document.getElementById("film-list");
 
 // Generar los elementos de imagen y agregarlos al div
 for (let i = 0; i < filmsGhibli.length; i++) {
-  // Crea un elemento de imagen
-  const imgElement = document.createElement("img");
+    // Crea un elemento de imagen
+    const imgElement = document.createElement("img");
+    
+    // Establece el atributo src con la URL de la imagen actual
+    imgElement.src = filmsGhibli[i].poster;
+    // Agrega la imagen al elemento div
+    filmListDiv.appendChild(imgElement);
+    // Establece el atributo style para cambiar el tamaño de la imagen
+    //imgElement.style.width = tamanosImagenes[i];
+    const titleElement = document.createElement("h3");
+    titleElement.textContent = filmsGhibli[i].title;
+    filmListDiv.appendChild(titleElement);
   
-  // Establece el atributo src con la URL de la imagen actual
-  imgElement.src = filmsGhibli[i].poster;
-  // Agrega la imagen al elemento div
-  filmListDiv.appendChild(imgElement);
-  // Establece el atributo style para cambiar el tamaño de la imagen
-  //imgElement.style.width = tamanosImagenes[i];
-  const titleElement = document.createElement("h3");
-  titleElement.textContent = filmsGhibli[i].title;
-  filmListDiv.appendChild(titleElement);
-
-  const release_dateElement = document.createElement("p");
-  release_dateElement.textContent = filmsGhibli[i].release_date;
-  filmListDiv.appendChild(release_dateElement);
-
-  const directorElement = document.createElement("p");
-  directorElement.textContent =filmsGhibli[i].director;
-  filmListDiv.appendChild(directorElement);
-
-
+    const release_dateElement = document.createElement("p");
+    release_dateElement.textContent = filmsGhibli[i].release_date;
+    filmListDiv.appendChild(release_dateElement);
   
-  console.log(titleElement) 
-
-}
-
-
-
+    const directorElement = document.createElement("p");
+    directorElement.textContent =filmsGhibli[i].director;
+    filmListDiv.appendChild(directorElement);
+  
+  
+    
+    console.log(titleElement) 
+  
+  }
+  
+  
+    
