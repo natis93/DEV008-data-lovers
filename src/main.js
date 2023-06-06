@@ -14,27 +14,27 @@ const filmListDiv = document.getElementById("film-list");
 
 // Generar los elementos de imagen y agregarlos al div
 for (let i = 0; i < filmsGhibli.length; i++) {
-  // Crea un elemento de imagen
+  const divPosterFilm = document.createElement("div");
   const imgElement = document.createElement("img");
 
   // Establece el atributo src con la URL de la imagen actual
   imgElement.src = filmsGhibli[i].poster;
   // Agrega la imagen al elemento div
-  filmListDiv.appendChild(imgElement);
+  divPosterFilm.appendChild(imgElement);
   // Establece el atributo style para cambiar el tamaño de la imagen
   //imgElement.style.width = tamanosImagenes[i];
-  const titleElement = document.createElement("h3");
+  const titleElement = document.createElement("h4");
   titleElement.textContent = filmsGhibli[i].title;
-  filmListDiv.appendChild(titleElement);
+  divPosterFilm.appendChild(titleElement);
 
   const release_dateElement = document.createElement("p");
   release_dateElement.textContent = filmsGhibli[i].release_date;
-  filmListDiv.appendChild(release_dateElement);
+  divPosterFilm.appendChild(release_dateElement);
 
   const directorElement = document.createElement("p");
   directorElement.textContent = filmsGhibli[i].director;
-  filmListDiv.appendChild(directorElement);
-
+  divPosterFilm.appendChild(directorElement);
+  filmListDiv.appendChild(divPosterFilm);
 
 
   console.log(titleElement)
