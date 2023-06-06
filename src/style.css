@@ -46,10 +46,11 @@ h1{
   }
 
  h6{
+  height: 40% ;
     color: beige;
     font-size: 25px;
     display: inline-block;
-    transform: translate(545%) ;
+    transform: translate(280%) ;
     background-color:#406f9de4;
   }
     
