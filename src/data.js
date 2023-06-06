@@ -7,3 +7,10 @@ export const example = () => {
 export const anotherExample = () => {
   return 'OMG';
 };
+
+export const filterGhibli = (data, director) => {
+    
+
+    return data.filter(element => element.director === director);
+         
+};
