@@ -11,6 +11,6 @@ export const anotherExample = () => {
 export const filterGhibli = (data, director) => {
     
 
-    return data.filter(element => element.director === director);
+  return data.filter(element => element.director === director);
          
 };
