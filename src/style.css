@@ -3,7 +3,7 @@ background-color:  #406f9d7f;
 
 }
 #header {
-  background-image: url('https://pbs.twimg.com/media/CdCAJOMUMAAeLFB.jpg '),url('https://th.bing.com/th/id/R.ab4ab26ebdeb8b61f14a6ba4f351c5c2?rik=leEPKuxfPnHZsA&riu=http%3a%2f%2f2.bp.blogspot.com%2f-i4-kOut1BHM%2fT5M9vyj93cI%2fAAAAAAAACjk%2fC3km5VF7Y_w%2fs1600%2fim.jpg&ehk=5NeD8L2JrNLI0yRR2lw1TrIb3NpdKFUw409y5hQ4Hqk%3d&risl=&pid=ImgRaw&r=0 ' );
+  background-image: url('https://i.postimg.cc/cJvQN3SK/Dise-o-sin-t-tulo-2.png'),url('https://th.bing.com/th/id/R.ab4ab26ebdeb8b61f14a6ba4f351c5c2?rik=leEPKuxfPnHZsA&riu=http%3a%2f%2f2.bp.blogspot.com%2f-i4-kOut1BHM%2fT5M9vyj93cI%2fAAAAAAAACjk%2fC3km5VF7Y_w%2fs1600%2fim.jpg&ehk=5NeD8L2JrNLI0yRR2lw1TrIb3NpdKFUw409y5hQ4Hqk%3d&risl=&pid=ImgRaw&r=0 ' );
   background-size: cover;
   background-position: center;
   animation: backgroundScroll 25s linear infinite; /* Establece la animación de desplazamiento de fondo */
