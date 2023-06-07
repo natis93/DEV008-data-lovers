@@ -37,6 +37,28 @@ for (let i = 0; i < filmsGhibli.length; i++) {
   filmListDiv.appendChild(divPosterFilm);
 
 
+  document.getElementById("showFilmsButton").addEventListener("click", function() {
+    //ocultar la pagina principal
+    document.getElementById("header").style.display = "none";
+    document.getElementById("selectDirectors").style.display="none";
+    //mostrar la seccion de peliculas
+    document.getElementById("film-list").style.display = "block";
+    document.getElementById("showFilmsButton").style.display = "none";
+    document.getElementById("goHomeButton").style.display = "block";
+  });
+  
+  document.getElementById("goHomeButton").addEventListener("click", function() {
+    //mostrar la pagina principal
+    document.getElementById("header").style.display = "block";
+    document.getElementById("selectDirectors").style.display = "block";
+    //ocultar la seccion de peliculas
+    document.getElementById("film-list").style.display = "none";
+    document.getElementById("showFilmsButton").style.display = "block";
+    document.getElementById("goHomeButton").style.display = "none";
+  });
+
+  
+
   console.log(titleElement)
 
 }
@@ -44,7 +66,7 @@ const filterSelected = document.getElementById("selectDirectors");
 filterSelected.addEventListener("change", () => {
   let nameDirectors = document.getElementById("selectDirectors").value;
   console.log(nameDirectors);
-});
+});/*
 
 /*
 const filterSelected = document.querySelectorAll(".combo-box-filter"); //getElementby ID
