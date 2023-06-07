@@ -3,7 +3,7 @@ background-color:  #406f9d7f;
 
 }
 #header {
-  background-image: url('https://i.postimg.cc/cJvQN3SK/Dise-o-sin-t-tulo-2.png'),url('https://th.bing.com/th/id/R.ab4ab26ebdeb8b61f14a6ba4f351c5c2?rik=leEPKuxfPnHZsA&riu=http%3a%2f%2f2.bp.blogspot.com%2f-i4-kOut1BHM%2fT5M9vyj93cI%2fAAAAAAAACjk%2fC3km5VF7Y_w%2fs1600%2fim.jpg&ehk=5NeD8L2JrNLI0yRR2lw1TrIb3NpdKFUw409y5hQ4Hqk%3d&risl=&pid=ImgRaw&r=0 ' );
+  background-image: url('https://i.postimg.cc/FRz3f2dz/Dise-o-sin-t-tulo-2-1-1.png');
   background-size: cover;
   background-position: center;
   animation: backgroundScroll 25s linear infinite; /* Establece la animación de desplazamiento de fondo */
@@ -21,7 +21,7 @@ background-color:  #406f9d7f;
   #showFilmsButton {
     width: auto;
     position: relative;
-    top: calc(100% + 10px);
+    top: calc(100% + 100%);
     left: 10%;
     transform: translateX(-50%);
     color: #406f9de4;
@@ -32,7 +32,7 @@ background-color:  #406f9d7f;
   #goHomeButton {
     width: auto;
     position:relative;
-    top: calc(100% + 10px);
+    top: calc(100% + 100%);
     left: 10%;
     transform: translateX(-50%);
     color: #406f9de4;
@@ -42,41 +42,43 @@ background-color:  #406f9d7f;
 
 
   h5{
-    font:small-caps 100%/100% serif ;
-    color:beige ; 
-    background-color:#406f9de4 ;
-    font-size: 190%;
-    text-align: center;
-    display: inline-block;
-    border-radius: 10%;
-    transform: translate(240%) ;
+    height: 5%;
+  width: 30%;
+   font:small-caps 80%/80% ;
+   color:beige;
+   background-color: #406f9de4;
+   font-size: 200%;
+   text-align: center;
+   border-radius: 10%;
+   margin: auto;  
 }
 h1{
-  height: 200px;
-  width: 600px;
+  height: 200%;
+  width: 80%;
   font:small-caps 100px/100px serif ;
    color: #406f9de4;
    background-color:#efebe5bd ;
    font-size: 600%;
    text-align: center;
-   border-radius: 40px;
+   border-radius: 10%;
    margin: auto;
   }
-  h3{
+  h3{ 
+    height: 200%;
+    width: 80%;
     font:small-caps 100%/100% serif ;
     color: beige;
     background-color:#406f9de4;
-    font-size: 30px;
-    border-radius: 10px;
-    display: inline-block;
-    transform: translate(30%) ;
+    font-size: 200%;
+    border-radius: 10%;
     text-align: center;
+    margin: auto;
   }
 
     
 #film-list {
     column-count: 4; /* Número de columnas deseadas */
-    column-gap: 10px; /* Espacio entre las columnas */
+    column-gap: 10%; /* Espacio entre las columnas */
     vertical-align: middle;
     background-image: url('imagen1.jpg'); /* Establece la imagen de fondo */
     background-size: cover;
@@ -84,9 +86,9 @@ h1{
 }
   
 #film-list img {
-  margin-right: 30px; /* Espacio entre las imágenes */
-  width: 200px;
-  height: 300px;
+  margin-right: 30%; /* Espacio entre las imágenes */
+  width: 100%;
+  height: 100%;
   display: flex
   
 }
