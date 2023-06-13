@@ -1,4 +1,5 @@
-export function filterGhibli(films, filmProperty, filmPropertyValue) {
+
+/*export function (films, filmProperty, filmPropertyValue) {
   if (!Array.isArray(films)) {
     throw new TypeError('films is not an array')
   }
@@ -71,3 +72,26 @@ function sortFilmsByProperty(films, property, order) {
 
   return sortedFilms;
 }
+
+// estas funciones son de ejemplo
+/*
+export const example = () => {
+  return 'example';
+};
+
+export const anotherExample = () => {
+  return 'OMG';
+};
+*/
+export const filterGhibli = (data, director) => {
+
+
+  return data.filter(element => element.director === director);
+
+};
+
+/*export const filmsGhibli = (element) => {
+  return 'OMG';
+};*/
+
+
