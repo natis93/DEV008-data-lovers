@@ -1,24 +1,33 @@
-body{
-background-color:  #406f9d7f;
-
+@media (max-width: 768px) {
+    
 }
-#header {
-  background-image: url('https://i.postimg.cc/FRz3f2dz/Dise-o-sin-t-tulo-2-1-1.png');
-  background-size: cover;
-  background-position: center;
-  animation: backgroundScroll 25s linear infinite; /* Establece la animación de desplazamiento de fondo */
+body {
+    background-color: #406f9d7f;
+    /*background-color: rgb(243, 247, 250);
+    font-family: 'Helvetica', 'Arial';
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+}*/
 }
-
+ #header {
+    background-image: url('https://i.postimg.cc/FRz3f2dz/Dise-o-sin-t-tulo-2-1-1.png');
+    background-size: cover;
+    background-position: center;
+    animation: backgroundScroll 25s linear infinite;
+    /* Establece la animación de desplazamiento de fondo */
+}
 @keyframes backgroundScroll {
-  0% {
-    background-position: 0 0; /* Inicia las imágenes en la posición inicial */
-  }
-  100% {
-    background-position: 100% 100%; /* Desplaza las imágenes diagonalmente */
-  }
-  }
-
-  #showFilmsButton {
+    0% {
+        background-position: 0 0;
+        /* Inicia las imágenes en la posición inicial */
+    }
+    100% {
+        background-position: 100% 100%;
+        /* Desplaza las imágenes diagonalmente */
+    }
+}
+#showFilmsButton {
     width: auto;
     position: relative;
     top: calc(100% + 100%);
@@ -26,69 +35,227 @@ background-color:  #406f9d7f;
     transform: translateX(-50%);
     color: #406f9de4;
     font-size: 120%
-
-  }
-  
-  #goHomeButton {
+}
+#goHomeButton {
     width: auto;
-    position:relative;
+    position: relative;
     top: calc(100% + 100%);
     left: 10%;
     transform: translateX(-50%);
     color: #406f9de4;
     font-size: 120%
-  }
-  
-
-
-  h5{
-    height: 5%;
-  width: 15%;
-   font:small-caps 80%/80% ;
-   color:beige;
-   background-color: #406f9de4;
-   font-size: 200%;
-   text-align: center;
-   border-radius: 10%;
-   margin: auto;  
 }
-h1{
-  height: 200%;
-  width: 40%;
-  font:small-caps 80%/80% serif ;
-   color: #406f9de4;
-   background-color:#efebe5bd ;
-   font-size: 600%;
-   text-align: center;
-   border-radius: 10%;
-   margin: auto;
-  }
-  h3{ 
+h5 {
+    height: 5%;
+    width: 15%;
+    font: small-caps 80%/80%;
+    color: beige;
+    background-color: #406f9de4;
+    font-size: 200%;
+    text-align: center;
+    border-radius: 10%;
+    margin: auto;
+}
+h1 {
+    height: 200%;
+    width: 40%;
+    font: small-caps 80%/80% serif;
+    color: #406f9de4;
+    background-color: #efebe5bd;
+    font-size: 600%;
+    text-align: center;
+    border-radius: 10%;
+    margin: auto;
+}
+h3 {
     height: 10%;
     width: 50%;
-    font:small-caps 100%/100% serif ;
+    font: small-caps 100%/100% serif;
     color: beige;
-    background-color:#406f9de4;
+    background-color: #406f9de4;
     font-size: 150%;
     border-radius: 10%;
     text-align: center;
     margin: auto;
-  }
-
-    
+}
 #film-list {
-    column-count: 4; /* Número de columnas deseadas */
-    column-gap: 10%; /* Espacio entre las columnas */
+    column-count: 4;
+    /* Número de columnas deseadas */
+    column-gap: 10%;
+    /* Espacio entre las columnas */
     vertical-align: middle;
-    background-image: url('imagen1.jpg'); /* Establece la imagen de fondo */
+    background-image: url('imagen1.jpg');
+    /* Establece la imagen de fondo */
     background-size: cover;
     background-position: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
-  
 #film-list img {
-  margin-right: 30%; /* Espacio entre las imágenes */
-  width: 100%;
-  height: 100%;
-  display: flex
-  
+    margin-right: 30%;
+    /* Espacio entre las imágenes */
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
 }
+
+body {
+    background-color: rgb(243, 247, 250);
+    font-family: 'Helvetica', 'Arial';
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+}
+/* inicio de sort by desplegable*/
+#sort-section {
+    top: 100px;
+    justify-content: right;
+    padding-right: 0px;
+    position: relative;
+    display: flex;
+    width: 1432px;
+}
+
+#sort-by-button {
+    height: 60px;
+}
+
+.sortby-text {
+    justify-content: center;
+    padding-right: 30px;
+}
+
+.svg {
+    color: rgba(35, 35, 35, 1);
+    transform: rotate(90deg);
+    width: 20px;
+    height: 20px;
+}
+
+.sort-by-option {
+    color: rgba(35, 35, 35, 1);
+    height: 40px;
+    width: auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+}
+
+.sort-by-option:hover {
+    color: #FDFEFF;
+    background-color: #39c;
+    cursor: pointer;
+}
+
+.options-to-click-sort-by {
+    display: none;
+    background: rgba(235, 235, 235, 1);
+    position: absolute;
+    right: 30px;
+    top: 65%;
+    width: 300px;
+    height: auto;
+    padding: 0px;
+}
+
+#sort-by-button:hover .options-to-click-sort-by {
+    display: list-item;
+    list-style: none;
+}
+
+#sort-by-button:hover {
+    color: #39c;
+}
+
+#sort-by-button:hover .svg {
+    color: #39c;
+}
+
+#sort-by-button ul li {
+    list-style: none;
+}
+
+#sort-by-button li {
+    font-size: 23px;
+}
+   /* sort */
+    #sort-section {
+        top: 30px;
+        padding-right: 10px;
+        width: 870px;
+    }
+
+    #sort-by-button {
+        width: auto;
+        height: 60px;
+    }
+
+    .sortby-text {
+        padding-right: 0;
+    }
+
+    .svg {
+        padding: auto;
+        width: 15px;
+    }
+
+    .sort-by-option {
+        height: 20px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        padding-left: 40px;
+    }
+
+    .options-to-click-sort-by {
+        top: 55%;
+        width: 250px;
+        height: auto;
+        padding: 0px;
+        right: 10px;
+    }
+
+    #sort-by-button li {
+        font-size: 18px;
+    }
+
+   
+    
+    /* sort */
+    #sort-section {
+        top: 0px;
+        padding-right: 10px;
+        width: 100%;
+        height: 34px;
+    }
+
+    #sort-by-button {
+        width: auto;
+        height: 60px;
+    }
+
+    .sortby-text {
+        padding-right: 0;
+        align-items: center;
+        display: flex;
+    }
+
+    .sort-by-option {
+        height: 10px;
+        padding-top: 8px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+    }
+
+    .options-to-click-sort-by {
+        top: 80%;
+        width: 180px;
+        height: auto;
+        padding: 0px;
+        right: 10px;
+    }
+
+    #sort-by-button li {
+        font-size: 14px;
+    }

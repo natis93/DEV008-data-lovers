@@ -2,48 +2,64 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Data Lovers Studio Ghibli</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Data Lovers Studio Ghibli</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
-  <header id="header">
-    <h5>welcome to the<br>world of</h5><br>
-    <h1><b>Studio Ghibli</h1><br>
-    <h3>"Any woman is just as capable of being a hero as any man".<br>
-      -Hayao Miyazaki.</h3><br>
-    
+    <header class="header-ghibli" id="header">
+        <h5>welcome to the<br>world of</h5><br>
+        <h1><b>Studio Ghibli</h1><br>
+        <h3>"Any woman is just as capable of being a hero as any man".<br>
+            -Hayao Miyazaki.</h3>
+        <div class="imagen-para-header"></div>
+        <button id="showFilmsButton">Show Films:</button><br>
     </header>
     <br>
-    <button id="showFilmsButton">Mostrar películas</button><br>
-    <button id="goHomeButton" style="display: none;">Volver a la página principal</button><br>
-    
-    <div id="film-list">
+
+    <main ><br>
+<div class="search-container">
+    <div class="search-bar-block">
+        <input type="search" id="searchBar" class="input-search-movie" placeholder="Search by title">
+        <button type="submit" id="search-button"><img src="img/3331255.svg"></button>
+      </div>
+    </div><br>
+
+    <div id="sort-section">
+      <div id="sort-by-button">
+        <button id="sort-by-button">Sort by ▼</button>
+        <ul class="options-to-click-sort-by">
+          <li class="sort-by-option" data-order="desc" data-property="release_date">Latest to oldest</li>
+          <li class="sort-by-option" data-order="asc" data-property="release_date">Oldest to latest</li>
+          <li class="sort-by-option" data-order="asc" data-property="title">A - Z</li>
+          <li class="sort-by-option" data-order="desc" data-property="title">Z - A</li>
+          
+        </ul>
+      </div>
     </div>
-  <section class="selectors">
-    <select id="selectDirectors" class="combo-box-filter">
-      <option value=" ">Filter films by</option>
-      <option value="Hayao Miyazaki">Directed by Hayao Miyazaki</option>
-      <option value="Hiromasa Yonebayashi">Directed by Hiromasa Yonebayashi</option>
-      <option value="Isao Takahata">Directed by Isao Takahata</option>
-      <option value="Hiroyuki Morita">Directed by Hiroyuki Morita</option>
-      <option value="Gorō Miyazaki">Directed by Gorō Miyazaki</option>
-      <option value="Yoshifumi Kondō">Directed by Yoshifumi Kondō</option>
-    </select>
-    <!-- Las imágenes de las películas se generarán dinámicamente aquí -->
-    <div id="film-list">
-  </div>
-  
-  
-    </section>
+    
 
+<section class="selectors"></section>
+        <div id="film-list"></div>
+            <select id="selectDirectors" class="combo-box-filter">
+                <option value=" ">Filter films by</option>
+                <option value="Hayao Miyazaki">Directed by Hayao Miyazaki</option>
+                <option value="Hiromasa Yonebayashi">Directed by Hiromasa Yonebayashi</option>
+                <option value="Isao Takahata">Directed by Isao Takahata</option>
+                <option value="Hiroyuki Morita">Directed by Hiroyuki Morita</option>
+                <option value="Gorō Miyazaki">Directed by Gorō Miyazaki</option>
+                <option value="Yoshifumi Kondō">Directed by Yoshifumi Kondō</option>
+            </select>
+        </section>
+
+        <button id="goHomeButton" style="display: none;">Volver a la página principal</button><br>
+        </div>
+    </main>
     <script src="main.js" type="module"></script>
-
     <footer>
-      <p>© 1985-2023 Studio Ghibli. All Rights Reserved.</p>
+        <p>© 1985-2023 Studio Ghibli. All Rights Reserved.</p>
     </footer>
 </body>
 
