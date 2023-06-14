@@ -1,5 +1,5 @@
 import { filtrarPeliculas, mostrarPeliculas, ordenarPeliculas } from "./data.js";
-const botonIr = document.getElementById("showFilmsButton");
+const botonMostrar = document.getElementById("showFilmsButton");
 const botonVolver = document.getElementById("goHomeButton");
 const peliculas = mostrarPeliculas();
 const filtrado = document.getElementById('input-busqueda-de-peliculas');
@@ -15,7 +15,7 @@ function visualizarPeliculasEnPantalla(dataghibli) {
       <h2>${dataghibli[i].title}</h2>
       <img src =${dataghibli[i].poster} class="imagen-pelicula" />
       <p>${dataghibli[i].description}</p>${dataghibli[i].release_date}
-      <p>${dataghibli[i].rt_score}<p>${dataghibli[i].director}
+      <p>${dataghibli[i].rt_score }<p>${dataghibli[i].director}
     </li>`;
     contenedor.innerHTML += listaPeliculas;
   }
@@ -31,7 +31,7 @@ filtrado.addEventListener('keyup', function () {
   visualizarPeliculasEnPantalla(peliculasFiltradas);
 });
 
-botonIr.addEventListener('click', alternarPantallas);
+botonMostrar.addEventListener('click', alternarPantallas);
 botonVolver.addEventListener('click', alternarPantallas);
 ordenAlfabetico.addEventListener('change', function () { 
   const selectedOption = this.options[this.selectedIndex];
