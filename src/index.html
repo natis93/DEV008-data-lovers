@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimun-scale=1.0" />
   <title>Data Lovers Studio Ghibli</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
-  <header id="header">
+  <header class="header-ghibli" id="header">
     <h5>welcome to the<br>world of</h5><br>
     <h1><b>Studio Ghibli</h1><br>
     <h3>"Any woman is just as capable of being a hero as any man".<br>
@@ -18,8 +18,8 @@
     
     </header>
     <br>
-    <button id="showFilmsButton">Show all films:</button><br>
-    <button id="goHomeButton" style="display: none;">Go back to Homepage</button><br>
+    <button id="showFilmsButton">Show Films:</button><br>
+    <button id="goHomeButton" style="display: none;">Volver a la página principal</button><br>
     
     <!--<div id="film-list">
     </div>-->
@@ -40,11 +40,12 @@
   
     </section>
 
-    <script src="main.js" type="module"></script>
+      <ul id="contenedor-peliculas"></ul>
+      <button type="button" id="goHomeButton">Go back to Homepage</button>
+    </div>
+  </main>
+  <script src="main.js" type="module"></script>
 
-    <footer>
-      <p>© 1985-2023 Studio Ghibli. All Rights Reserved.</p>
-    </footer>
 </body>
 
 </html>
