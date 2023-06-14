@@ -54,3 +54,12 @@ export function filtrarPeliculas(dataghibli, valorAFiltrar) {
   const peliculasOrdenadas = ordenarPeliculasPorRtScore(peliculasFiltradas);
   return peliculasOrdenadas;
 }
+export function getEmojiForScore(score) {
+  if (score >= 90) {
+    return '🔥'; // Emoji para una puntuación alta
+  } else if (score >= 70) {
+    return '⭐️'; // Emoji para una puntuación moderada
+  } else {
+    return '✨'; // Emoji para una puntuación baja
+  }
+}

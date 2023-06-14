@@ -15,7 +15,7 @@ function visualizarPeliculasEnPantalla(dataghibli) {
       <h2>${dataghibli[i].title}</h2>
       <img src =${dataghibli[i].poster} class="imagen-pelicula" />
       <p>${dataghibli[i].description}</p>${dataghibli[i].release_date}
-      <p>${dataghibli[i].rt_score}<p>${dataghibli[i].director}
+      <p>${dataghibli[i].rt_score }<p>${dataghibli[i].director}
     </li>`;
     contenedor.innerHTML += listaPeliculas;
   }
