@@ -1,11 +1,10 @@
+/* Reset CSS */
 body {
-    background-color: #406f9d7f;
-
+    background-color: #3b67937f;
 }
-
 #header {
     background-image: url('https://i.postimg.cc/FRz3f2dz/Dise-o-sin-t-tulo-2-1-1.png');
-    background-size: cover;
+    background-size: auto 100% ;
     background-position: center;
     animation: backgroundScroll 25s linear infinite;
     /* Establece la animación de desplazamiento de fondo */
@@ -20,27 +19,29 @@ body {
         /* Desplaza las imágenes diagonalmente */
     }
 }
-#showFilmsButton {
-    width: auto;
-    position: relative;
-    top: calc(100% + 100%);
-    left: 10%;
-    transform: translateX(-50%);
-    color: #406f9de4;
-    font-size: 120%
-}
+
 #goHomeButton {
-    width: auto;
-    position: relative;
-    top: calc(100% + 100%);
-    left: 10%;
-    transform: translateX(-50%);
-    color: #406f9de4;
-    font-size: 120%
+  background-color:  #406f9de4;
+  color: white; 
+  padding: 10px 20px; 
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px; 
+  text-decoration: none;
 }
 
+#showFilmsButton{
+  background-color:  #406f9de4;
+  color: white; 
+  padding: 10px 20px; 
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px; 
+  text-decoration: none;
 
-
+}
 h5 {
     height: 5%;
     width: 15%;
@@ -52,10 +53,17 @@ h5 {
     border-radius: 10%;
     margin: auto;
 }
-<<<<<<< HEAD
-=======
+.ordenador{
+  background-color:  #406f9de4;
+  color: white; 
+  padding: 10px 20px; 
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px; 
+  text-decoration: none;
+}
 
->>>>>>> 70d3e82c09a1566079bf7eeaf1ed26294b8767dc
 h1 {
     height: 200%;
     width: 40%;
@@ -79,187 +87,73 @@ h3 {
     margin: auto;
 }
 
+h2 {
+  background-color: #406f9d75;
+  font-size: 20px;
+  margin-bottom: 8px;
+  text-align: center;
+  color: black;
+}
+p{
+background-color:rgb(226, 220, 220);
+font: size 30px;
+text-align: center ;
+color: #070707f7;
+}
+.buscador{
+  width:40%;
+  height: 20%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  }
+input{
+  outline: none;
+  box-sizing: border-box;
+height:20%;
+width: 50%;
+padding: 0 20;
+color: black;
+border-radius: 50px;
+font-size: 20px;
+border: 1px solid rgba(0, 55, 255, 0.909);
+transition: all .7s ease;
+}
+::placeholder{ 
+  color: rgb(125, 121, 121);
+}
+.primera-interfaz{
+  display: block;
+}
 
-#film-list {
-    column-count: 4;
-    /* Número de columnas deseadas */
-    column-gap: 10%;
-    /* Espacio entre las columnas */
-    vertical-align: middle;
-    background-image: url('imagen1.jpg');
-    /* Establece la imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: flex-start;
+.segunda-interfaz{
+  display: none;
+}
+
+#contenedor-peliculas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pelicula {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 5%;
+  margin: 8px;
 }
 
 
-#film-list img {
-    margin-right: 30%;
-    /* Espacio entre las imágenes */
-    width: 90%;
-    height: 90%;
-    display: flex;
-    justify-content: center;
+.imagen-pelicula {
+  width: 80%;
 }
 
-body {
-    background-color: rgb(243, 247, 250);
-    font-family: 'Helvetica', 'Arial';
-    height: 100%;
-    width: 100%;
-    margin: 0%;
+/* Media query para computador */
+@media (min-width: 1024px) {
+  .header-ghibli {
+    padding: 16px 0;
+  }
+  .pelicula {
+    width: 31%;
+  }
 }
-/* inicio de sort by desplegable*/
-#sort-section {
-    top: 100px;
-    justify-content: right;
-    padding-right: 0px;
-    position: relative;
-    display: flex;
-    width: 1432px;
-}
-
-#sort-by-button {
-    height: 60px;
-}
-
-.sortby-text {
-    justify-content: center;
-    padding-right: 30px;
-}
-
-.svg {
-    color: rgba(35, 35, 35, 1);
-    transform: rotate(90deg);
-    width: 20px;
-    height: 20px;
-}
-
-.sort-by-option {
-    color: rgba(35, 35, 35, 1);
-    height: 40px;
-    width: auto;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    padding-left: 40px;
-}
-
-.sort-by-option:hover {
-    color: #FDFEFF;
-    background-color: #39c;
-    cursor: pointer;
-}
-
-.options-to-click-sort-by {
-    display: none;
-    background: rgba(235, 235, 235, 1);
-    position: absolute;
-    right: 30px;
-    top: 65%;
-    width: 300px;
-    height: auto;
-    padding: 0px;
-}
-
-#sort-by-button:hover .options-to-click-sort-by {
-    display: list-item;
-    list-style: none;
-}
-
-#sort-by-button:hover {
-    color: #39c;
-}
-
-#sort-by-button:hover .svg {
-    color: #39c;
-}
-
-#sort-by-button ul li {
-    list-style: none;
-}
-
-#sort-by-button li {
-    font-size: 23px;
-}
-   /* sort */
-    #sort-section {
-        top: 30px;
-        padding-right: 10px;
-        width: 870px;
-    }
-
-    #sort-by-button {
-        width: auto;
-        height: 60px;
-    }
-
-    .sortby-text {
-        padding-right: 0;
-    }
-
-    .svg {
-        padding: auto;
-        width: 15px;
-    }
-
-    .sort-by-option {
-        height: 20px;
-        padding-top: 13px;
-        padding-bottom: 13px;
-        padding-left: 40px;
-    }
-
-    .options-to-click-sort-by {
-        top: 55%;
-        width: 250px;
-        height: auto;
-        padding: 0px;
-        right: 10px;
-    }
-
-    #sort-by-button li {
-        font-size: 18px;
-    }
-
-   
-    
-    /* sort */
-    #sort-section {
-        top: 0px;
-        padding-right: 10px;
-        width: 100%;
-        height: 34px;
-    }
-
-    #sort-by-button {
-        width: auto;
-        height: 60px;
-    }
-
-    .sortby-text {
-        padding-right: 0;
-        align-items: center;
-        display: flex;
-    }
-
-    .sort-by-option {
-        height: 10px;
-        padding-top: 8px;
-        padding-bottom: 10px;
-        padding-left: 20px;
-    }
-
-    .options-to-click-sort-by {
-        top: 80%;
-        width: 180px;
-        height: auto;
-        padding: 0px;
-        right: 10px;
-    }
-
-    #sort-by-button li {
-        font-size: 14px;
-    }

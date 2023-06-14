@@ -1,97 +1,56 @@
-
-/*export function (films, filmProperty, filmPropertyValue) {
-  if (!Array.isArray(films)) {
-    throw new TypeError('films is not an array')
-  }
-
-  if (!filmProperty) {
-    throw new TypeError('filmProperty can not be undefined')
-  }
- 
-  let filteredMovies = [];
-  filteredMovies = films.filter(film => film[filmProperty] === filmPropertyValue);
-  return filteredMovies;
+import data from './data/ghibli/ghibli.js';
+export function mostrarPeliculas() {
+  return data.films;
 }
 
-
-//sortData(data, sortBy, sortOrder=[1,-1])
-export function SortByMovies(films, sortByProperty, sortOrder) {
-  if (!Array.isArray(films)) {
-    throw new TypeError('films is not an array')
-  }
-  
-  if (!sortByProperty) {
-    throw new TypeError('sortByProperty can not be undefined')
-  }
-
-  let sortedMovies = [];
-  sortedMovies = films.sort((a, b) => {
-    if (a[sortByProperty] > b[sortByProperty]) {
-      return 1 * sortOrder;
-    } else if (b[sortByProperty] > a[sortByProperty]) {
-      return -1 * sortOrder;
-    } else {
+export function ordenarPeliculas(dataghibli, orden) {
+  if (orden === 'a-z') {
+    return dataghibli.sort((a, b) => {
+      if (a.title < b.title) {
+        return -1;
+      }
+      if (a.title > b.title) {
+        return 1;
+      }
       return 0;
-    }
-  });
-
-  return sortedMovies;
+    });
+  } else {
+    return dataghibli.sort((a, b) => {
+      if (a.title > b.title) {
+        return -1;
+      }
+      if (a.title < b.title) {
+        return 1;
+      }
+      return 0;
+    });
+  }
 }
 
-let filteredAndSortedMovies = []; // guardar estado 
-export function FilterAndSortMovies(films, filmProperty, filmPropertyValue, sortByProperty, sortOrder){
-  if (filteredAndSortedMovies.length === 0){
-    filteredAndSortedMovies = films;
-  }
-
-  if (filmProperty && filmPropertyValue){
-    filteredAndSortedMovies = filterGhibli(films, filmProperty, filmPropertyValue); 
-  } 
-  
-  if (sortByProperty && sortOrder){
-    filteredAndSortedMovies = SortByMovies(filteredAndSortedMovies, sortByProperty, sortOrder);
-  }
-  return filteredAndSortedMovies;
-}
-function sortFilmsByProperty(films, property, order) {
-  // Realizar una copia del array de películas para evitar modificar el original
-  const sortedFilms = [...films];
-
-  sortedFilms.sort((a, b) => {
-    const valueA = a[property];
-    const valueB = b[property];
-
-    if (order === "asc") {
-      return valueA.localeCompare(valueB);
-    } else if (order === "desc") {
-      return valueB.localeCompare(valueA);
-    }
-
+export function ordenarPorRtScore(a, b) {
+  if (a["rt-score"] < b["rt-score"]) {
+    return -1;
+  } else if (a["rt-score"] > b["rt-score"]) {
+    return 1;
+  } else {
     return 0;
-  });
-
-  return sortedFilms;
+  }
+}
+export function ordenarPeliculasPorRtScore(peliculas, orden) {
+  if (orden === 'a-z') {
+    return peliculas.sort((a, b) => a.title.localeCompare(b.title));
+  } else if (orden === 'rt-score') {
+    return peliculas.sort(ordenarPorRtScore);
+  } else {
+    return peliculas;
+  }
 }
 
-// estas funciones son de ejemplo
-/*
-export const example = () => {
-  return 'example';
-};
 
-export const anotherExample = () => {
-  return 'OMG';
-};
-*/
-export const filterGhibli = (data, director) => {
-
-
-  return data.filter(element => element.director === director);
-
-};
-
-/*export const filmsGhibli = (element) => {
-  return 'OMG';
-};*/
-
-
+export function filtrarPeliculas(dataghibli, valorAFiltrar) {
+  const peliculasFiltradas = dataghibli.filter((pelicula) => {
+    return pelicula.title.toLowerCase().indexOf(valorAFiltrar.toLowerCase()) !== -1
+  })
+  const peliculasOrdenadas = ordenarPeliculasPorRtScore(peliculasFiltradas);
+  return peliculasOrdenadas;
+}
