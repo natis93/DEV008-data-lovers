@@ -1,51 +1,31 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html><head>
   <meta charset="utf-8">
   <meta name="viewport"
     content="width=device-width, initial-scale=1,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimun-scale=1.0" />
   <title>Data Lovers Studio Ghibli</title>
   <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
+</head><body>
   <header class="header-ghibli" id="header">
     <h5>welcome to the<br>world of</h5><br>
     <h1><b>Studio Ghibli</h1><br>
     <h3>"Any woman is just as capable of being a hero as any man".<br>
-      -Hayao Miyazaki.</h3><br>
-    
-    </header>
-    <br>
-    <button id="showFilmsButton">Show Films:</button><br>
-    <button id="goHomeButton" style="display: none;">Volver a la página principal</button><br>
-    
-    <!--<div id="film-list">
-    </div>-->
-  <section class="selectors">
-    <select id="selectDirectors" class="combo-box-filter">
-      <option value=" ">Filter films by</option>
-      <option value="Hayao Miyazaki">Directed by Hayao Miyazaki</option>
-      <option value="Hiromasa Yonebayashi">Directed by Hiromasa Yonebayashi</option>
-      <option value="Isao Takahata">Directed by Isao Takahata</option>
-      <option value="Hiroyuki Morita">Directed by Hiroyuki Morita</option>
-      <option value="Gorō Miyazaki">Directed by Gorō Miyazaki</option>
-      <option value="Yoshifumi Kondō">Directed by Yoshifumi Kondō</option>
-    </select>
-    <!-- Las imágenes de las películas se generarán dinámicamente aquí -->
-    <div id="film-list">
-  </div>
-  
-  
-    </section>
-
-      <ul id="contenedor-peliculas"></ul>
+      -Hayao Miyazaki.</h3>
+    <div class="imagen-para-header">
+    </div>
+    <button type="button" id="showFilmsButton">Show all films</button>
+  </header>
+  <div id="root"></div>
+  <main class="main-style">    <div class="segunda-interfaz" id="segunda-interfaz">
+      <section class="buscador">
+        <input type="text" placeholder="Movie search" id="input-busqueda-de-peliculas" />      </section>
+      <select id="orden-alfabetico" class="ordenador">
+        <option value="a-z" selected>A - Z</option>
+        <option value="z-a">Z - A</option>
+        <option value="rt-score">puntucion alta</option>
+        <option value="rt-score">puntucion baja</option>
+      </select>      <ul id="contenedor-peliculas"></ul>
       <button type="button" id="goHomeButton">Go back to Homepage</button>
     </div>
   </main>
-  <script src="main.js" type="module"></script>
-
-</body>
-
-</html>
+  <script src="main.js" type="module"></script></body></html>
