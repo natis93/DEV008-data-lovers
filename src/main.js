@@ -14,8 +14,8 @@ function visualizarPeliculasEnPantalla(dataghibli) {
     <li class="pelicula">
       <h2>${dataghibli[i].title}</h2>
       <img src =${dataghibli[i].poster} class="imagen-pelicula" />
-      <p>${dataghibli[i].description}</p>${dataghibli[i].release_date}
-      <p>${dataghibli[i].rt_score }<p>${dataghibli[i].director}
+      <label>${dataghibli[i].description}</label>${dataghibli[i].release_date}
+      <p>${dataghibli[i].rt_score }</p><p>${dataghibli[i].director}</P>
     </li>`;
     contenedor.innerHTML += listaPeliculas;
   }
@@ -55,4 +55,5 @@ function alternarPantallas(e) {
     header.style.display = "block";
   }
 }
+
 
