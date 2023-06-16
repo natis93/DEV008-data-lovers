@@ -16,18 +16,17 @@
     <button type="button" id="showFilmsButton">Show all films</button>
   </header>
   <div id="root"></div>
-<button>hola</button>
   <main class="main-style">
 
-    <div class="segunda-interfaz" id="segunda-interfaz">
-      <section class="buscador">
-        <input type="text" placeholder="Movie search" id="input-busqueda-de-peliculas" />      </section>
-      <select id="orden-alfabetico" class="ordenador">
+    <div class="second-interface" id="second-interface">
+      <section class="searchbar">
+        <input type="text" placeholder="Movie search" id="input-film-search" />      </section>
+      <select id="alphabetical-order" class="sorter">
         <option value="a-z" selected>A - Z</option>
         <option value="z-a">Z - A</option>
-        <option value="rt-score">puntucion alta</option>
-        <option value="rt-score">puntucion baja</option>
-      </select>      <ul id="contenedor-peliculas"></ul>
+        <option value="rt-score">Highest rated</option>
+        <option value="rt-score">Lowest rated</option>
+      </select>      <ul id="container-films"></ul>
       <button type="button" id="goHomeButton">Go back to Homepage</button>
     </div>
   </main>

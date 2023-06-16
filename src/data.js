@@ -1,10 +1,10 @@
 import data from './data/ghibli/ghibli.js';
-export function mostrarPeliculas() {
+export function showFilms() {
   return data.films;
 }
 
-export function ordenarPeliculas(dataghibli, orden) {
-  if (orden === 'a-z') {
+export function sortFilms(dataghibli, order) {
+  if (order === 'a-z') {
     return dataghibli.sort((a, b) => {
       if (a.title < b.title) {
         return -1;
@@ -27,7 +27,7 @@ export function ordenarPeliculas(dataghibli, orden) {
   }
 }
 
-export function ordenarPorRtScore(a, b) {
+export function sorByRtScore(a, b) {
   if (a["rt-score"] < b["rt-score"]) {
     return -1;
   } else if (a["rt-score"] > b["rt-score"]) {
@@ -36,23 +36,23 @@ export function ordenarPorRtScore(a, b) {
     return 0;
   }
 }
-export function ordenarPeliculasPorRtScore(peliculas, orden) {
-  if (orden === 'a-z') {
-    return peliculas.sort((a, b) => a.title.localeCompare(b.title));
-  } else if (orden === 'rt-score') {
-    return peliculas.sort(ordenarPorRtScore);
+export function sortFilmsByRtScore(films, order) {
+  if (order === 'a-z') {
+    return films.sort((a, b) => a.title.localeCompare(b.title));
+  } else if (order === 'rt-score') {
+    return films.sort(sorByRtScore);
   } else {
-    return peliculas;
+    return films;
   }
 }
 
 
-export function filtrarPeliculas(dataghibli, valorAFiltrar) {
-  const peliculasFiltradas = dataghibli.filter((pelicula) => {
-    return pelicula.title.toLowerCase().indexOf(valorAFiltrar.toLowerCase()) !== -1
+export function filterFilms(dataghibli, filteredValue) {
+  const filteredFilms = dataghibli.filter((film) => {
+    return film.title.toLowerCase().indexOf(filteredValue.toLowerCase()) !== -1
   })
-  const peliculasOrdenadas = ordenarPeliculasPorRtScore(peliculasFiltradas);
-  return peliculasOrdenadas;
+  const sortedFilms = sortFilmsByRtScore(filteredFilms);
+  return sortedFilms;
 }
 export function getEmojiForScore(score) {
   if (score >= 90) {

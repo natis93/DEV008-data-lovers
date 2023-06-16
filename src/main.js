@@ -1,57 +1,57 @@
-import { filtrarPeliculas, mostrarPeliculas, ordenarPeliculas } from "./data.js";
-const botonMostrar = document.getElementById("showFilmsButton");
-const botonVolver = document.getElementById("goHomeButton");
-const peliculas = mostrarPeliculas();
-const filtrado = document.getElementById('input-busqueda-de-peliculas');
-const ordenAlfabetico = document.getElementById('orden-alfabetico');
+import { filterFilms, showFilms, sortFilms } from "./data.js";
+const showButton = document.getElementById("showFilmsButton");
+const backButton = document.getElementById("goHomeButton");
+const films = showFilms();
+const filter = document.getElementById('input-film-search');
+const abcSort = document.getElementById('alphabetical-order');
 
 
-function visualizarPeliculasEnPantalla(dataghibli) {
-  const contenedor = document.getElementById("contenedor-peliculas");
-  contenedor.innerHTML = ''
+function displayFilmsOnscreen(dataghibli) {
+  const container = document.getElementById("container-films");
+  container.innerHTML = ''
   for (let i = 0; i < dataghibli.length; i++) {
-    const listaPeliculas = `
-    <li class="pelicula">
+    const listFilms = `
+    <li class="film">
       <h2>${dataghibli[i].title}</h2>
-      <img src =${dataghibli[i].poster} class="imagen-pelicula" />
+      <img src =${dataghibli[i].poster} class="img-film" />
       <p>${dataghibli[i].description}</p>${dataghibli[i].release_date}
       <p>${dataghibli[i].rt_score }<p>${dataghibli[i].director}
     </li>`;
-    contenedor.innerHTML += listaPeliculas;
+    container.innerHTML += listFilms;
   }
 }
 
-const peliculasOrdenadas = ordenarPeliculas(peliculas, 'a-z');
-visualizarPeliculasEnPantalla(peliculasOrdenadas);
+const sortedFilms = sortFilms(films, 'a-z');
+displayFilmsOnscreen(sortedFilms);
 
 //se crea escuchador de evento para los botones
 
-filtrado.addEventListener('keyup', function () {
-  const peliculasFiltradas = filtrarPeliculas(peliculas, filtrado.value);
-  visualizarPeliculasEnPantalla(peliculasFiltradas);
+filter.addEventListener('keyup', function () {
+  const filteredFilms = filterFilms(films, filter.value);
+  displayFilmsOnscreen(filteredFilms);
 });
 
-botonMostrar.addEventListener('click', alternarPantallas);
-botonVolver.addEventListener('click', alternarPantallas);
-ordenAlfabetico.addEventListener('change', function () { 
+showButton.addEventListener('click', switchScreens);
+backButton.addEventListener('click', switchScreens);
+abcSort.addEventListener('change', function () { 
   const selectedOption = this.options[this.selectedIndex];
-  const peliculasOrdenadas = ordenarPeliculas(peliculas, selectedOption.value);
+  const sortedFilms = sortFilms(films, selectedOption.value);
   
-  visualizarPeliculasEnPantalla(peliculasOrdenadas);
+  displayFilmsOnscreen(sortedFilms);
 });
 
 
-function alternarPantallas(e) {
+function switchScreens(e) {
   e.preventDefault();
 
   const header = document.getElementById("header");
-  const segundaPantalla = document.getElementById("segunda-interfaz");
+  const screenTwo = document.getElementById("second-interface");
 
   if (window.getComputedStyle(header).display === "block") {
     header.style.display = "none";
-    segundaPantalla.style.display = "block";
-  } else if (window.getComputedStyle(segundaPantalla).display === "block") {
-    segundaPantalla.style.display = "none";
+    screenTwo.style.display = "block";
+  } else if (window.getComputedStyle(screenTwo).display === "block") {
+    screenTwo.style.display = "none";
     header.style.display = "block";
   }
 }
