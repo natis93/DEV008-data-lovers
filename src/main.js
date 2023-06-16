@@ -18,50 +18,53 @@ function visualizarPeliculasEnPantalla(dataghibli) {
       <p>${dataghibli[i].description}</p><p> Year: ${dataghibli[i].release_date}</p>
       <p> Dir: ${dataghibli[i].director}</P> &#9733 Punctuation &#9733 : ${dataghibli[i].rt_score}
     </li>`;
+
     contenedor.innerHTML += listaPeliculas;
     // Agregar evento de clic a cada película pop up
     const peliculasElements = contenedor.querySelectorAll('.pelicula');
     peliculasElements[i].addEventListener('click', () => mostrarDetallesPelicula(pelicula));
+
+    container.innerHTML += listFilms;
+
   }
 }
 function mostrarDetallesPelicula(pelicula) {
   const popupContainer = document.getElementById("popup-container");
-  
+
   // Crear el contenido del pop-up
   const popupContent = document.createElement("div");
   popupContent.classList.add("popup-content");
-  
+
   const titulo = document.createElement("h2");
   titulo.textContent = pelicula.title;
   popupContent.appendChild(titulo);
-  
+
   const descripcion = document.createElement("p");
   descripcion.textContent = pelicula.description;
   popupContent.appendChild(descripcion);
-  
+
   const anioLanzamiento = document.createElement("p");
   anioLanzamiento.textContent = "Year: " + pelicula.release_date;
   popupContent.appendChild(anioLanzamiento);
-  
+
   const director = document.createElement("p");
   director.textContent = "Dir: " + pelicula.director;
   popupContent.appendChild(director);
-  
+
   const puntaje = document.createElement("p");
   puntaje.textContent = "&#9733; Punctuation &#9733;: " + pelicula.rt_score;
   popupContent.appendChild(puntaje);
-  
+
   // Agregar el contenido del pop-up al contenedor
   popupContainer.innerHTML = "";
   popupContainer.appendChild(popupContent);
-  
+
   // Mostrar el pop-up
   popupContainer.style.display = "block";
 }
 
-const peliculasOrdenadas = ordenarPeliculas(peliculas, 'a-z');
-visualizarPeliculasEnPantalla(peliculasOrdenadas);
-
+const sortedFilms = sortFilms(films, 'a-z');
+displayFilmsOnscreen(sortedFilms);
 
 //se crea escuchador de evento para los botones
 filtrado.addEventListener('keyup', function () {
@@ -73,7 +76,7 @@ botonMostrar.addEventListener('click', alternarPantallas);
 botonVolver.addEventListener('click', alternarPantallas);
 ordenAlfabetico.addEventListener('change', function () {
   const selectedOption = this.options[this.selectedIndex].value;
-  let peliculasOrdenadas= peliculas
+  let peliculasOrdenadas = peliculas
   peliculasOrdenadas = ordenarPorRtScore(peliculas);
   //ordenamiento de peliculas
   if (selectedOption === 'a-z') {
@@ -85,21 +88,34 @@ ordenAlfabetico.addEventListener('change', function () {
   } else if (selectedOption === 'rt-score-baja') {
     peliculasOrdenadas = ordenarPorRtScore(peliculas, 'baja');
   }
-  
-  visualizarPeliculasEnPantalla(peliculasOrdenadas);
-});
-//interfaz uno y dos
-function alternarPantallas(e) {
-  e.preventDefault();
 
-  const header = document.getElementById("header");
-  const segundaPantalla = document.getElementById("segunda-interfaz");
+  filter.addEventListener('keyup', function () {
+    const filteredFilms = filterFilms(films, filter.value);
+    displayFilmsOnscreen(filteredFilms);
+  });
 
-  if (window.getComputedStyle(header).display === "block") {
-    header.style.display = "none";
-    segundaPantalla.style.display = "block";
-  } else if (window.getComputedStyle(segundaPantalla).display === "block") {
-    segundaPantalla.style.display = "none";
-    header.style.display = "block";
+  showButton.addEventListener('click', switchScreens);
+  backButton.addEventListener('click', switchScreens);
+  abcSort.addEventListener('change', function () {
+    const selectedOption = this.options[this.selectedIndex];
+    const sortedFilms = sortFilms(films, selectedOption.value);
+
+
+    displayFilmsOnscreen(sortedFilms);
+  });
+  //interfaz uno y dos
+  function alternarPantallas(e) {
+    e.preventDefault();
+
+    const header = document.getElementById("header");
+    const screenTwo = document.getElementById("second-interface");
+
+    if (window.getComputedStyle(header).display === "block") {
+      header.style.display = "none";
+      screenTwo.style.display = "block";
+    } else if (window.getComputedStyle(screenTwo).display === "block") {
+      screenTwo.style.display = "none";
+      header.style.display = "block";
+    }
   }
-}
+});
