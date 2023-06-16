@@ -33,6 +33,21 @@ describe('pruebas de peliculas ghibli ', () => {
 
     expect(resultado[0].title).toBe('Castle in the Sky');
   });
+
+  it('mantener el orden original si las peliculas tienen el mismo titulo', () => {
+    const dataghibli = [
+      { title: 'A' },
+      { title: 'A' },
+      { title: 'A' }
+    ];
+    const orden = 'a-z';
+
+    const resultado = ordenarPeliculas(dataghibli, orden);
+
+    expect(resultado[0].title).toBe('A');
+    expect(resultado[1].title).toBe('A');
+    expect(resultado[2].title).toBe('A');
+  });
 });
 
 describe('ordenarPorRtScore ', () => {
@@ -46,7 +61,7 @@ describe('ordenarPorRtScore ', () => {
     expect(resultado[0].rt_score).toBe('100');
   });
 
-  it('ordenar peliculas  y que ordene con puntuacion baja', () => {
+  it('ordenar peliculas y que ordene con puntuacion baja', () => {
     const dataghibli = mostrarPeliculas()
 
     const orden = 'baja'
@@ -71,4 +86,6 @@ describe('ordenarPorRtScore ', () => {
     const resultado = ordenarPorRtScore(dataghibli, orden);
     expect(resultado).toEqual(dataghibli);
   });
+  
 });
+
