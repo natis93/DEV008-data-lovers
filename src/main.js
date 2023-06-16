@@ -13,9 +13,9 @@ function displayFilmsOnscreen(dataghibli) {
     const listFilms = `
     <li class="film">
       <h2>${dataghibli[i].title}</h2>
-      <img src =${dataghibli[i].poster} class="img-film" />
-      <p>${dataghibli[i].description}</p>${dataghibli[i].release_date}
-      <p>${dataghibli[i].rt_score }<p>${dataghibli[i].director}
+      <img src =${dataghibli[i].poster} class="imagen-pelicula" />
+      <label>${dataghibli[i].description}</label>${dataghibli[i].release_date}
+      <p>${dataghibli[i].rt_score }</p><p>${dataghibli[i].director}</P>
     </li>`;
     container.innerHTML += listFilms;
   }
@@ -55,4 +55,5 @@ function switchScreens(e) {
     header.style.display = "block";
   }
 }
+
 
