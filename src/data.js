@@ -27,10 +27,20 @@ export function ordenarPeliculas(dataghibli, orden) {
   }
 }
 
+export function ordenarPorRtScore(dataghibli, orden) {
+  if (orden === 'alta') {
+    return dataghibli.sort((a, b) => parseFloat(b.rt_score) - parseFloat(a.rt_score));
+  } else if (orden === 'baja') {
+    return dataghibli.sort((a, b) => parseFloat(a.rt_score) - parseFloat(b.rt_score));
+  } else {
+    return dataghibli;
+  }
+}
+
 export function filtrarPeliculas(dataghibli, valorAFiltrar) {
   const peliculasFiltradas = dataghibli.filter((pelicula) => {
     return pelicula.title.toLowerCase().indexOf(valorAFiltrar.toLowerCase()) !== -1
-  })
+  });
   const peliculasOrdenadas = ordenarPeliculas(peliculasFiltradas);
   return peliculasOrdenadas;
 }

@@ -19,21 +19,19 @@
   </header>
   <div id="root"></div>
   <main class="main-style">
-<div id="popup" class="popup">
-  <div class="popup-content">
-  
-  </div>
-</div>
-
+<div id="popup-container"></div>
     <div class="segunda-interfaz" id="segunda-interfaz">
       <section class="buscador">
-        <input type="text" placeholder="Movie search" id="input-busqueda-de-peliculas" />      </section>
+        <input type="text" placeholder="Movie search" id="input-busqueda-de-peliculas" /> 
+      </section>
       <select id="orden-alfabetico" class="ordenador">
-        <option value="a-z" selected>A - Z</option>
-        <option value="z-a">Z - A</option>
-        <option value="rt-score">puntucion alta</option>
-        <option value="rt-score">puntucion baja</option>
-      </select>      <ul id="contenedor-peliculas"></ul>
+      <option selected>Sort by</option>
+        <option value="a-z">A-Z</option>
+        <option value="z-a">Z-A</option>
+        <option value="rt-score-alta">High score</option>
+        <option value="rt-score-baja">Low score</option>
+      </select>      
+      <ul id="contenedor-peliculas"></ul>
       <button type="button" id="goHomeButton">Go back to Homepage</button>
     </div>
   </main>

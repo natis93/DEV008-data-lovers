@@ -1,4 +1,4 @@
-import { filtrarPeliculas, mostrarPeliculas, ordenarPeliculas } from '../src/data.js';
+import { filtrarPeliculas, mostrarPeliculas, ordenarPeliculas, ordenarPorRtScore } from '../src/data.js';
 
 describe('pruebas de peliculas ghibli ', () => {
   it('mostrar peliculas y que hayan 20', () => {
@@ -19,7 +19,7 @@ describe('pruebas de peliculas ghibli ', () => {
 
   it('ordenar peliculas y que ordene de z hasta a', () => {
     const dataghibli = mostrarPeliculas()
-  
+
     const orden = 'z-a'
     const resultado = ordenarPeliculas(dataghibli, orden);
 
@@ -27,10 +27,48 @@ describe('pruebas de peliculas ghibli ', () => {
   });
   it('ordenar peliculas y que ordene de a hasta z', () => {
     const dataghibli = mostrarPeliculas()
-  
+
     const orden = 'a-z'
     const resultado = ordenarPeliculas(dataghibli, orden);
 
     expect(resultado[0].title).toBe('Castle in the Sky');
+  });
+});
+
+describe('ordenarPorRtScore ', () => {
+
+  it('ordenar peliculas y que ordene con puntuacion alta ', () => {
+    const dataghibli = mostrarPeliculas()
+
+    const orden = 'alta'
+    const resultado = ordenarPorRtScore(dataghibli, orden);
+
+    expect(resultado[0].rt_score).toBe('100');
+  });
+
+  it('ordenar peliculas  y que ordene con puntuacion baja', () => {
+    const dataghibli = mostrarPeliculas()
+
+    const orden = 'baja'
+
+    const resultado = ordenarPorRtScore(dataghibli, orden);
+
+    expect(resultado[0].rt_score).toBe('41');
+  });
+  it('no debería modificar el orden si se proporciona un valor inválido', () => {
+    const dataghibli = mostrarPeliculas()
+
+    const orden = 'invalido';
+    const resultado = ordenarPorRtScore(dataghibli, orden);
+
+    expect(resultado).toEqual(dataghibli);
+  });
+
+  it('devuelve un nuevo arreglo sin modificar el original', () => {
+    const dataghibli = mostrarPeliculas()
+
+    const orden = 'alta'
+    const resultado = ordenarPorRtScore(dataghibli, orden);
+    expect(resultado).toEqual(dataghibli);
   });
 });
