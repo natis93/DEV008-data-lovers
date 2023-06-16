@@ -2,7 +2,6 @@ import data from './data/ghibli/ghibli.js';
 export function mostrarPeliculas() {
   return data.films;
 }
-
 export function ordenarPeliculas(dataghibli, orden) {
   if (orden === 'a-z') {
     return dataghibli.sort((a, b) => {
@@ -26,7 +25,6 @@ export function ordenarPeliculas(dataghibli, orden) {
     });
   }
 }
-
 export function ordenarPorRtScore(dataghibli, orden) {
   if (orden === 'alta') {
     return dataghibli.sort((a, b) => parseFloat(b.rt_score) - parseFloat(a.rt_score));
@@ -36,7 +34,6 @@ export function ordenarPorRtScore(dataghibli, orden) {
     return dataghibli;
   }
 }
-
 export function filtrarPeliculas(dataghibli, valorAFiltrar) {
   const peliculasFiltradas = dataghibli.filter((pelicula) => {
     return pelicula.title.toLowerCase().indexOf(valorAFiltrar.toLowerCase()) !== -1
@@ -44,3 +41,10 @@ export function filtrarPeliculas(dataghibli, valorAFiltrar) {
   const peliculasOrdenadas = ordenarPeliculas(peliculasFiltradas);
   return peliculasOrdenadas;
 }
+
+
+
+
+
+
+
