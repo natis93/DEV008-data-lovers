@@ -29,41 +29,43 @@ hallazgos.
 
 A continuación los resultados de nuestro cuestionario:
 
-![ResultadoColores](https://imgur.com/k6d5syd)
+Resultado Colores https://imgur.com/k6d5syd
 
-![resultadoTonos](https://imgur.com/94M3gqW)
+Resultado Tonos https://imgur.com/94M3gqW
 
-![elementoInicio](https://imgur.com/0WMSIGz)
+Elemento de Inicio https://imgur.com/0WMSIGz
 
 Finalmente, decidimos hacer un catastro en cuanto a la distribución de películas vistas por persona encuestada:
 
-![listado](https://imgur.com/4Gqk0v7)
+Listado de películas https://imgur.com/4Gqk0v7
 
 Es a partir de los resultados de este ítem en particular que notamos que, si bien hay películas que se destacan como las más vistas, la película menos vista aún representó más del 20% de las respuestas. A raíz de esto, tomamos la decisión de usar las protagonistas femeninas de todas las películas del listado como parte de la pantalla de inicio.
 
 ## 3. Nuestras Historias de Usuario
 
-![HDU1](https://imgur.com/EajBaex)    
+Historias de Usuario 1 https://imgur.com/EajBaex  
 
-![HDU2](https://imgur.com/QtLXlyt)
+Historias de Usuario 2 https://imgur.com/QtLXlyt
 
-![HDU3](https://imgur.com/O57OoYC)
+Historias de Usuario 3 https://imgur.com/O57OoYC
 
 ## 4. Prototipos de alta y baja fidelidad
 
 * Prototipo de baja fidelidad:
 
-![Aquí nuestro prototipo de baja fidelidad](https://imgur.com/7WGeMz7)
+Aquí nuestro prototipo de baja fidelidad https://imgur.com/7WGeMz7
 
 * Prototipo de alta fidelidad:
 
-![Prototipo1](https://imgur.com/U8xnoOE)
+Aquí imágenes de nuestro prototipo de alta fidelidad
 
-![Prototipo2](https://imgur.com/FU5IP2q)
+Prototipo1 https://imgur.com/U8xnoOE
 
-![Prototipo3](https://imgur.com/sk4iqoS)
+Prototipo2 https://imgur.com/FU5IP2q
 
-    - https://www.canva.com/design/DAFjxXnzwE8/sCSP_pbWtF63rT900R3llQ/edit?utm_content=DAFjxXnzwE8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+Prototipo3 https://imgur.com/sk4iqoS
+
+    https://www.canva.com/design/DAFjxXnzwE8/sCSP_pbWtF63rT900R3llQ/edit?utm_content=DAFjxXnzwE8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 ## 5. Problemas encontrados en tests de usabilidad
 
