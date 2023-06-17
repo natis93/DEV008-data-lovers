@@ -6,48 +6,47 @@ const filtrado = document.getElementById('input-busqueda-de-peliculas');
 const ordenAlfabetico = document.getElementById('orden-alfabetico');
 function visualizarPeliculasEnPantalla(dataghibli) {
   const contenedor = document.getElementById("contenedor-peliculas");
+
   contenedor.innerHTML = ''
+  ocultarPopUp();
   for (let i = 0; i < dataghibli.length; i++) {
     const pelicula = dataghibli[i]; // Obtener la película correspondiente
-    const listaPeliculas = `
-    <li class="pelicula">
+    const listaPeliculas = `<li class="pelicula">
       <h2>${dataghibli[i].title}</h2>
       <img src =${dataghibli[i].poster} class="imagen-pelicula" />
-      <p>${dataghibli[i].description}</p><p> Year: ${dataghibli[i].release_date}</p>
-      <p> Dir: ${dataghibli[i].director}</P> &#9733 Punctuation &#9733 : ${dataghibli[i].rt_score}
+      <p>Year:${dataghibli[i].release_date}<p/><p>Dir:${dataghibli[i].director}</p>
+      <p> &#9733 Puntuaction &#9733 ${dataghibli[i].rt_score}</p>
     </li>`;
     contenedor.innerHTML += listaPeliculas;
     // Agregar evento de clic a cada película pop up
     const peliculasElements = contenedor.querySelectorAll('.pelicula');
     peliculasElements[i].addEventListener('click', () => mostrarDetallesPelicula(pelicula));
   }
+  function ocultarPopUp() {
+    const popupContainer = document.getElementById("popup-container");
+    popupContainer.style.display = "none";
+  }
 }
 function mostrarDetallesPelicula(pelicula) {
   const popupContainer = document.getElementById("popup-container");
-  // Crear el contenido del pop-up
   const popupContent = document.createElement("div");
   popupContent.classList.add("popup-content");
-  const titulo = document.createElement("h2");
-  titulo.textContent = pelicula.title;
-  popupContent.appendChild(titulo);
+
   const descripcion = document.createElement("p");
   descripcion.textContent = pelicula.description;
   popupContent.appendChild(descripcion);
-  const anioLanzamiento = document.createElement("p");
-  anioLanzamiento.textContent = "Year: " + pelicula.release_date;
-  popupContent.appendChild(anioLanzamiento);
-  const director = document.createElement("p");
-  director.textContent = "Dir: " + pelicula.director;
-  popupContent.appendChild(director);
-  const puntaje = document.createElement("p");
-  puntaje.textContent = "&#9733; Punctuation &#9733;: " + pelicula.rt_score;
-  popupContent.appendChild(puntaje);
-  // Agregar el contenido del pop-up al contenedor
+ 
+
+  // Limpiar el contenedor antes de agregar el nuevo contenido
   popupContainer.innerHTML = "";
+
+  // Agregar el contenido del pop-up al contenedor
   popupContainer.appendChild(popupContent);
+
   // Mostrar el pop-up
   popupContainer.style.display = "block";
 }
+
 const peliculasOrdenadas = ordenarPeliculas(peliculas, 'a-z');
 visualizarPeliculasEnPantalla(peliculasOrdenadas);
 //se crea escuchador de evento para los botones
@@ -59,7 +58,7 @@ botonMostrar.addEventListener('click', alternarPantallas);
 botonVolver.addEventListener('click', alternarPantallas);
 ordenAlfabetico.addEventListener('change', function () {
   const selectedOption = this.options[this.selectedIndex].value;
-  let peliculasOrdenadas= peliculas
+  let peliculasOrdenadas = peliculas
   peliculasOrdenadas = ordenarPorRtScore(peliculas);
   //ordenamiento de peliculas
   if (selectedOption === 'a-z') {

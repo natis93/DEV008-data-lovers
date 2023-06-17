@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html><head>
+<html>
+
+<head>
   <meta charset="utf-8">
   <meta name="viewport"
     content="width=device-width, initial-scale=1,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimun-scale=1.0" />
   <title>Data Lovers Studio Ghibli</title>
   <link rel="stylesheet" href="style.css" />
-</head><body>
+</head>
+
+<body>
   <header class="header-ghibli" id="header">
     <h5>welcome to the<br>world of</h5><br>
     <h1>Studio Ghibli</h1><br>
@@ -19,20 +23,38 @@
   </header>
   <div id="root"></div>
   <main class="main-style">
-<div id="popup-container"></div>
+
     <div class="segunda-interfaz" id="segunda-interfaz">
       <section class="buscador">
-        <input type="text" placeholder="Movie search" id="input-busqueda-de-peliculas" /> 
+        <input type="text" placeholder="Movie search" id="input-busqueda-de-peliculas" />
       </section>
       <select id="orden-alfabetico" class="ordenador">
-      <option selected>Sort by</option>
+        <option selected>Sort by</option>
         <option value="a-z">A-Z</option>
         <option value="z-a">Z-A</option>
         <option value="rt-score-alta">High score</option>
         <option value="rt-score-baja">Low score</option>
-      </select>      
+      </select>
+      <div id="popup-container" style="display: none;"></div>
+
       <ul id="contenedor-peliculas"></ul>
+
       <button type="button" id="goHomeButton">Go back to Homepage</button>
     </div>
   </main>
-  <script src="main.js" type="module"></script></body></html>
+  <footer>
+    <section class="redes-sociales">
+      <div class="contenedor">
+        <a class="youtube" href="https://www.youtube.com/watch?v=o_tMMTUIeZM"><img src="https://img.freepik.com/free-icon/youtube_318-566773.jpg"></a>
+        <a class="twitter" href="https://twitter.com/ghiblipicture?lang=es"><img src="https://seeklogo.com/images/T/twitter-logo-7249D46199-seeklogo.com.png "></a>
+        <a class="facebook" href="https://www.facebook.com/GhibliUSA/"><img
+            src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-0.png "></a>
+        <a class="instagram" href="https://www.secure.instagram.com/studioghibliedit/?hl=es-la"><img
+            src=" https://brandslogo.net/wp-content/uploads/2016/06/Instagram-logo.png"></a>
+      </div>
+    </section>
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>

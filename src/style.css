@@ -1,151 +1,244 @@
 /* Reset CSS */
 body {
-  background-color: #3b67937f;
+  background-color: #406f9d7f;
+
 }
+
 #header {
   background-image: url('https://i.postimg.cc/FRz3f2dz/Dise-o-sin-t-tulo-2-1-1.png');
-  background-size: auto 100% ;
+  background-size: auto 100%;
   background-position: center;
   animation: backgroundScroll 25s linear infinite;
   /* Establece la animación de desplazamiento de fondo */
 }
+
 @keyframes backgroundScroll {
   0% {
-      background-position: 0 0;
-      /* Inicia las imágenes en la posición inicial */
+    background-position: 0 0;
+    /* Inicia las imágenes en la posición inicial */
   }
+
   100% {
-      background-position: 100% 100%;
-      /* Desplaza las imágenes diagonalmente */
+    background-position: 100% 100%;
+    /* Desplaza las imágenes diagonalmente */
   }
-}#goHomeButton,
-#showFilmsButton,
-.ordenador{
-background-color:  #406f9de4;
-color: white;
-padding: 10px 20px;
-font-size: 16px;
-border: none;
-cursor: pointer;
-border-radius: 4px;
-text-decoration: none;
 }
+
+#goHomeButton,
+#showFilmsButton,
+.ordenador {
+  background-color: #406f9de4;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
 h5 {
   height: 5%;
-  width: 15%;
+  width: 20%;
   font: small-caps 80%/80%;
   color: beige;
   background-color: #406f9de4;
-  font-size: 200%;
+  font-size: 250%;
   text-align: center;
   border-radius: 10%;
   margin: auto;
 }
+
 .buscador {
-display: flex;
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 h1 {
   height: 200%;
   width: 40%;
   font: small-caps 80%/80% serif;
   color: #406f9de4;
   background-color: #efebe5bd;
-  font-size: 630%;
+  font-size: 700%;
   text-align: center;
   border-radius: 10%;
   margin: auto;
 }
+
 h3 {
   height: 10%;
   width: 70%;
   font: small-caps 100%/100% serif;
   color: beige;
   background-color: #406f9de4;
-  font-size: 200%;
+  font-size: 250%;
   border-radius: 10%;
   text-align: center;
   margin: auto;
 }
+
 h2 {
-font-size: 20px;
-margin-bottom: 8px;
-text-align: center;
-color: rgb(255, 250, 250);
+  font-size: 180%;
+  margin-bottom: 8px;
+  text-align: center;
+  color: rgb(255, 250, 250);
 }
 p{
-background-color:rgb(226, 220, 220);
-font: size 30px;
-text-align: center ;
-color: #535050;
+ 
+  font-size: 20px; /* Cambiar el tamaño de fuente del texto */
+  color: #ffffff;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-input{
-outline: none;
-box-sizing: border-box;
-height:20%;
-width: 20%;
-color: black;
-border-radius: 50px;
-font-size: 20px;
-border: 3px solid #406f9de4;
-transition: all .7s ease;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+input {
+  outline: none;
+  box-sizing: border-box;
+  height: 20%;
+  width: 20%;
+  color: black;
+  border-radius: 50px;
+  font-size: 20px;
+  border: 3px solid #406f9de4;
+  transition: all .7s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
-.primera-interfaz{
-display: block;
+
+.primera-interfaz {
+  display: block;
 }
-.segunda-interfaz{
-display: none;
+
+.segunda-interfaz {
+  display: none;
 }
+
 #contenedor-peliculas {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
 }
+
 #contenedor-peliculas .pelicula {
-border: 3px solid#406f9d96 ; /* Cambia "red" al color de borde deseado */
-border-radius: 5%;
-margin: 10px;
-text-align: center;
-box-shadow:  0px 2px 6px rgba(0, 0, 0, 20);
-background-color: #3b6793f8;
+  border: 3px solid#406f9d96;
+  /* Cambia "red" al color de borde deseado */
+  border-radius: 5%;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 20);
+  background-color: #3b6793c9;
 }
+
 #contenedor-peliculas .pelicula .imagen-pelicula {
-width: 70%; /* Ajusta el ancho de la imagen según tus necesidades */
-margin: 0 auto; /* Centra horizontalmente la imagen */
-border-radius: 5%;
-box-shadow:  0px 2px 6px rgba(0, 0, 0, 20);
+  width: 70%;
+  /* Ajusta el ancho de la imagen según tus necesidades */
+  margin:left;
+  /* Centra horizontalmente la imagen */
+  border-radius: 5%;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 20);
 }
+  
+footer img {
+
+  height: 1.5%;
+}
+
+footer .redes-sociales {
+  display: flex;
+  align-items: center;
+  background-color:#406f9d90;
+  padding: 11px;
+  width: 40%;
+  height: 25%;
+  margin: auto;
+}
+
+footer .contenedor {
+  display: flex;
+  justify-content: center;
+}
+
+footer .redes-sociales a {
+  color: #fff;
+  text-align: center;
+  width: 24px;
+  display: block;
+  padding: 4px;
+  border-radius: 8px;
+  font-size: 5px;
+  margin: 0 20px;
+}
+
+footer .redes-sociales .twitter:hover {
+  background: #b7d3e4;
+}
+
+footer .redes-sociales .facebook:hover {
+  background: #3b5998;
+}
+
+footer .redes-sociales .youtube:hover {
+  background: #cd201f;
+}
+
+footer .redes-sociales .instagram:hover {
+  background: #ee80a5;
+}
+#popup-container {
+  position: absolute;
+  top: 50%;
+  right: 70%;
+  height: 350px;
+  width: 290px;
+  padding: 10px;
+  background-color:#406f9dd9;
+  box-shadow: 0 2px 5px rgb(255, 255, 255);
+  display: none;
+  transform: translate(0, -35%);
+
+}
+.popup-content p {
+  font-size: 20px; /* Cambiar el tamaño de fuente del texto */
+  color:#ffffff;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+  
 /* Media query para computador */
 @media (min-width: 1024px) {
-.header-ghibli {
-  padding: 16px 0;
+  .header-ghibli {
+    padding: 16px 0;
+  }
+
+  .pelicula {
+    width: 31%;
+  }
 }
-.pelicula {
-  width: 31%;
-}
-}
+
 /* Media query para tablet */
 @media (min-width: 768px) {
-.iframe-header {
-  width: 100%;
-  height: 400px;
+  .iframe-header {
+    width: 100%;
+    height: 400px;
+  }
+
+  .pelicula {
+    width: 47%;
+  }
 }
-.pelicula {
-  width: 47%;
-}
-}
+
 /* Media query para computador */
 @media (min-width: 1024px) {
-.header-ghibli {
-  padding: 16px 0;
-}
-.pelicula {
-  width: 31%;
-}
+  .header-ghibli {
+    padding: 16px 0;
+  }
+
+  .pelicula {
+    width: 31%;
+  }
 }
