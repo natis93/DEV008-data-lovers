@@ -86,6 +86,6 @@ describe('ordenarPorRtScore ', () => {
     const resultado = ordenarPorRtScore(dataghibli, orden);
     expect(resultado).toEqual(dataghibli);
   });
-  
+
 });
 

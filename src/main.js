@@ -35,7 +35,7 @@ function mostrarDetallesPelicula(pelicula) {
   const descripcion = document.createElement("p");
   descripcion.textContent = pelicula.description;
   popupContent.appendChild(descripcion);
- 
+
 
   // Limpiar el contenedor antes de agregar el nuevo contenido
   popupContainer.innerHTML = "";
