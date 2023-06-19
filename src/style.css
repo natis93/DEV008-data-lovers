@@ -125,11 +125,11 @@ p {
   right: 75%;
   height: auto;
   width: 290px;
-  padding: 10px;
+  padding: 5%;
   background-color: #406f9dd9;
   box-shadow: 0 2px 5px rgb(255, 255, 255);
   border-radius: 15%;
-  display: grid;
+  display: contents;
   transform: translate(0, -30%);
 
 }
