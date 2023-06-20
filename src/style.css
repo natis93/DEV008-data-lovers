@@ -121,15 +121,14 @@ p {
 
 #popup-container {
   position: absolute;
-  top: 50%;
-  right: 75%;
+  top: 45%;
+  right: 69%;
   height: auto;
-  width: 290px;
-  padding: 5%;
+  width: 300px;
+  padding: 1%;
   background-color: #406f9dd9;
   box-shadow: 0 2px 5px rgb(255, 255, 255);
-  border-radius: 15%;
-  display: contents;
+  border-radius: 15px;
   transform: translate(0, -30%);
 
 }
